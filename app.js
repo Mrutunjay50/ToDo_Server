@@ -27,8 +27,8 @@ app.use(morgan("common"));
 
 app.use(cors());
 
-// app.use('/', (req, res) => {
-//   res.write('API in Connected'); //write a response to the client
-// })
+app.use('/', (req, res) => {
+  res.status(200).json('API in Connected'); //write a response to the client
+})
 app.use('/auth',userRoutes);
 app.use(notesRoute);
